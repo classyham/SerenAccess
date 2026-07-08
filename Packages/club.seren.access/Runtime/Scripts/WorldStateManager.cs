@@ -30,10 +30,6 @@ namespace SerenAccess
         [Header("Listeners")]
         [Tooltip("UdonBehaviour scripts that will receive events when the world state changes. The event to override is OnWorldStateChanged.")]
         [SerializeField] private UdonBehaviour[] ListenerMappings;
-
-        [Header("Data Formatting")]
-        [Tooltip("The array keys in the JSON that will be read.")]
-        [SerializeField] private string[] jsonKeys;
         
         [Header("Debug")]
         [Tooltip("Enable debug logging to the console.")]

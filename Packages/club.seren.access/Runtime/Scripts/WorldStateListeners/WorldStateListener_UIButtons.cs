@@ -1,37 +1,37 @@
-﻿
-using UdonSharp;
+﻿using UdonSharp;
 using UnityEngine;
+using UnityEngine.UI;
 using VRC.SDKBase;
 using VRC.Udon;
 using VRC.SDK3.Data;
 
 namespace SerenAccess
 {
-    public class WorldStateListener_Colliders : WorldStateListenerBase
+    public class WorldStateListener_UIButtons : WorldStateListenerBase
     {
 
-        [Header("Colliders")]
-        [Tooltip("Colliders that will be enabled when the JSON key is true, and disabled when false.")]
-        [SerializeField] private Collider[] enabledColliders;
+        [Header("UI Buttons")]
+        [Tooltip("Buttons that will be enabled when the JSON key is true, and disabled when false.")]
+        [SerializeField] private Button[] enabledButtons;
 
-        [Tooltip("Colliders that will be disabled when the JSON key is true, and enabled when false.")]
-        [SerializeField] private Collider[] disabledColliders;
+        [Tooltip("Buttons that will be disabled when the JSON key is true, and enabled when false.")]
+        [SerializeField] private Button[] disabledButtons;
 
         private void Start()
         {
-            foreach (var col in enabledColliders)
+            foreach (Button button in enabledButtons)
             {
-                if (col != null)
+                if (button != null)
                 {
-                    col.enabled = false; // Start with colliders disabled until we check the world state
+                    button.interactable = false;
                 }
             }
 
-            foreach (var col in disabledColliders)
+            foreach (Button button in disabledButtons)
             {
-                if (col != null)
+                if (button != null)
                 {
-                    col.enabled = true; // Start with disabled colliders enabled until we check the world state
+                    button.interactable = true;
                 }
             }
         }
@@ -40,7 +40,7 @@ namespace SerenAccess
         {
             if (worldStateManager == null)
             {
-                Debug.LogError("[WorldStateListener_Colliders] worldStateManager is not set.");
+                Debug.LogError("[WorldStateListener_UIButtons] worldStateManager is not set.");
                 return;
             }
 
@@ -61,19 +61,19 @@ namespace SerenAccess
                 }
             }
 
-            foreach (var col in enabledColliders)
+            foreach (Button button in enabledButtons)
             {
-                if (col != null)
+                if (button != null)
                 {
-                    col.enabled = bIsOnList;
+                    button.interactable = bIsOnList;
                 }
             }
 
-            foreach (var col in disabledColliders)
+            foreach (Button button in disabledButtons)
             {
-                if (col != null)
+                if (button != null)
                 {
-                    col.enabled = !bIsOnList;
+                    button.interactable = !bIsOnList;
                 }
             }
         }

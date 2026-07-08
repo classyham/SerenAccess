@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
-  m_Name: WorldStateListener_Colliders
+  m_Name: WorldStateListener_UIButtons
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: f3c94a263e64ba3458044bf8a894c2e9,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 8657274dc41119d4c9fe88913d7c540f,
     type: 2}
   udonAssembly: 
   assemblyError: 
-  sourceCsScript: {fileID: 11500000, guid: 4aaf876ca6f2653449b8dbbdef4dd457, type: 3}
+  sourceCsScript: {fileID: 11500000, guid: 2e8b72e458838a541931e6ad228f5cee, type: 3}
   scriptVersion: 2
   compiledVersion: 2
   behaviourSyncMode: 0
   hasInteractEvent: 0
-  scriptID: -5971296254108108538
+  scriptID: 878328225837277174
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
@@ -352,19 +352,19 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: enabledColliders
+      Data: enabledButtons
     - Name: $v
       Entry: 7
       Data: 25|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: <Name>k__BackingField
       Entry: 1
-      Data: enabledColliders
+      Data: enabledButtons
     - Name: <UserType>k__BackingField
       Entry: 7
       Data: 26|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
-      Data: UnityEngine.Collider[], UnityEngine.PhysicsModule
+      Data: UnityEngine.UI.Button[], UnityEngine.UI
     - Name: 
       Entry: 8
       Data: 
@@ -394,7 +394,7 @@ MonoBehaviour:
       Data: 28|UnityEngine.HeaderAttribute, UnityEngine.CoreModule
     - Name: header
       Entry: 1
-      Data: Colliders
+      Data: UI Buttons
     - Name: 
       Entry: 8
       Data: 
@@ -403,7 +403,7 @@ MonoBehaviour:
       Data: 29|UnityEngine.TooltipAttribute, UnityEngine.CoreModule
     - Name: tooltip
       Entry: 1
-      Data: Colliders that will be enabled when the JSON key is true, and disabled
+      Data: Buttons that will be enabled when the JSON key is true, and disabled
         when false.
     - Name: 
       Entry: 8
@@ -431,13 +431,13 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: disabledColliders
+      Data: disabledButtons
     - Name: $v
       Entry: 7
       Data: 31|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: <Name>k__BackingField
       Entry: 1
-      Data: disabledColliders
+      Data: disabledButtons
     - Name: <UserType>k__BackingField
       Entry: 9
       Data: 26
@@ -467,7 +467,7 @@ MonoBehaviour:
       Data: 33|UnityEngine.TooltipAttribute, UnityEngine.CoreModule
     - Name: tooltip
       Entry: 1
-      Data: Colliders that will be disabled when the JSON key is true, and enabled
+      Data: Buttons that will be disabled when the JSON key is true, and enabled
         when false.
     - Name: 
       Entry: 8
