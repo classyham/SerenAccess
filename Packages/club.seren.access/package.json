@@ -1,0 +1,17 @@
+{
+  "name": "club.seren.access",
+  "displayName": "_SEREN ACCESS",
+  "version": "0.0.1",
+  "unity": "2022.3",
+  "description": "Extensible remote whitelist based access control system",
+  "vrchatVersion": "2022.1.1",
+  "author": {
+    "name": "Classyham",
+    "email": "vpmcontact@classyham.com",
+    "url": "https://www.classyham.com"
+  },
+  "dependencies": {
+    "com.vrchat.base": "3.10.4",
+    "com.vrchat.worlds": "3.10.4"
+  }
+}
