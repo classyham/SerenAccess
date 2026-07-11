@@ -11,6 +11,9 @@
     },
     "com.texelsaur.common": {
       "version": "1.8.3"
+    },
+    "club.seren.json": {
+      "version": "0.0.1"
     }
   },
   "locked": {
@@ -35,6 +38,10 @@
       "dependencies": {
         "com.vrchat.worlds": "^3.8.0"
       }
+    },
+    "club.seren.json": {
+      "version": "0.0.1",
+      "dependencies": {}
     }
   }
 }

@@ -1,4 +1,4 @@
-﻿
+﻿using SerenJson;
 using UdonSharp;
 using UnityEngine;
 using VRC.SDKBase;
@@ -7,7 +7,7 @@ using VRC.SDK3.Data;
 
 namespace SerenAccess
 {
-    public class WorldStateListener_Colliders : WorldStateListenerBase
+    public class WorldStateListener_Colliders : JsonListenerBase
     {
 
         [Header("Colliders")]
@@ -38,9 +38,9 @@ namespace SerenAccess
 
         public override void OnWorldStateChanged()
         {
-            if (worldStateManager == null)
+            if (jsonManager == null)
             {
-                Debug.LogError("[WorldStateListener_Colliders] worldStateManager is not set.");
+                Debug.LogError("[WorldStateListener_Colliders] JsonManager is not set.");
                 return;
             }
 
@@ -80,7 +80,7 @@ namespace SerenAccess
 
         private bool CheckKeys(string key)
         {
-        DataList dataList = worldStateManager.GetArray(key);
+        DataList dataList = jsonManager.GetArray(key);
 
             if (dataList.Contains(Networking.LocalPlayer.displayName))
             {

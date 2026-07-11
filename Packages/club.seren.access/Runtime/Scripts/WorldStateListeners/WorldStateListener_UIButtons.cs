@@ -1,4 +1,5 @@
-﻿using UdonSharp;
+﻿using SerenJson;
+using UdonSharp;
 using UnityEngine;
 using UnityEngine.UI;
 using VRC.SDKBase;
@@ -7,7 +8,7 @@ using VRC.SDK3.Data;
 
 namespace SerenAccess
 {
-    public class WorldStateListener_UIButtons : WorldStateListenerBase
+    public class WorldStateListener_UIButtons : JsonListenerBase
     {
 
         [Header("UI Buttons")]
@@ -38,9 +39,9 @@ namespace SerenAccess
 
         public override void OnWorldStateChanged()
         {
-            if (worldStateManager == null)
+            if (jsonManager == null)
             {
-                Debug.LogError("[WorldStateListener_UIButtons] worldStateManager is not set.");
+                Debug.LogError("[WorldStateListener_UIButtons] JsonManager is not set.");
                 return;
             }
 
@@ -80,7 +81,7 @@ namespace SerenAccess
 
         private bool CheckKeys(string key)
         {
-        DataList dataList = worldStateManager.GetArray(key);
+        DataList dataList = jsonManager.GetArray(key);
 
             if (dataList.Contains(Networking.LocalPlayer.displayName))
             {

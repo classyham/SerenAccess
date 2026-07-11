@@ -1,4 +1,5 @@
 ﻿using SerenAccess;
+using SerenJson;
 using Texel;
 using UdonSharp;
 using UnityEngine;
@@ -10,7 +11,7 @@ public class WorldStateHandler_TXL : AccessControlHandler
 {
     [Header("World State")]
     [Tooltip("The World State Manager script.")]
-    [SerializeField] private WorldStateManager worldStateManager;
+    [SerializeField] private JsonManager jsonManager;
 
     [Tooltip("The JSON key that will be read from the world state. The key uses dot notation to access nested objects, e.g. 'WorldPerms.Admin'.")]
     [SerializeField] private string jsonKey;
@@ -22,15 +23,15 @@ public class WorldStateHandler_TXL : AccessControlHandler
     
     public override AccessHandlerResult _CheckAccess(VRCPlayerApi player)
     {
-        if (worldStateManager == null)
+        if (jsonManager == null)
         {
-            Debug.LogError("[WorldStateHandler_TXL] worldStateManager is not set.");
+            Debug.LogError("[WorldStateHandler_TXL] JsonManager is not set.");
             return AccessHandlerResult.Deny;
         }
 
         bool bIsOnList = false;
 
-        DataList dataList = worldStateManager.GetArray(jsonKey);
+        DataList dataList = jsonManager.GetArray(jsonKey);
 
         if (dataList.Contains(player.displayName))
         {

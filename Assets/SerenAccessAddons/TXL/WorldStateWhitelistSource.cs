@@ -1,4 +1,4 @@
-﻿
+﻿using SerenJson;
 using SerenAccess;
 using Texel;
 using UdonSharp;
@@ -15,7 +15,7 @@ namespace SerenAccess
         [Header("Data")]
 
         [Tooltip("The World State Manager script.")]
-        [SerializeField] protected WorldStateManager worldStateManager;
+        [SerializeField] protected JsonManager jsonManager;
 
         [Tooltip("The JSON key that will be read from the world state. The key uses dot notation to access nested objects, e.g. 'WorldPerms.Admin'.")]
         [SerializeField] protected string jsonKey;
@@ -51,13 +51,13 @@ namespace SerenAccess
 
         public void OnWorldStateChanged()
         {
-            if (worldStateManager == null)
+            if (jsonManager == null)
             {
-                _DebugLog("[WorldStateWhitelistSource] worldStateManager is not set.");
+                _DebugLog("[WorldStateWhitelistSource] JsonManager is not set.");
                 return;
             }
 
-            DataList dataList = worldStateManager.GetArray(jsonKey);
+            DataList dataList = jsonManager.GetArray(jsonKey);
 
             string[] newUserList = new string[dataList.Count];
             for (int i = 0; i < dataList.Count; i++)

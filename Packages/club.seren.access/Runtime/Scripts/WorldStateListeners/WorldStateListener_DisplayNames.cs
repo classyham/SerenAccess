@@ -1,12 +1,13 @@
-﻿using UdonSharp;
+﻿using SerenJson;
+using System.Text;
+using UdonSharp;
 using UnityEngine;
 using VRC.SDK3.Data;
-using System.Text;
 
 namespace SerenAccess
 {
     [UdonBehaviourSyncMode(BehaviourSyncMode.NoVariableSync)]
-    public class WorldStateListener_DisplayNames : WorldStateListenerBase
+    public class WorldStateListener_DisplayNames : JsonListenerBase
     {
         [Header("Display Configuration")]
         [Tooltip("Should we trim the names to content after the last dot? (e.g., 'WorldPerms.Admin' becomes 'Admin')")]
@@ -17,9 +18,9 @@ namespace SerenAccess
 
         public override void OnWorldStateChanged()
         {
-            if (worldStateManager == null || accessListViewer == null)
+            if (jsonManager == null || accessListViewer == null)
             {
-                Debug.LogError("[WorldStateListener_DisplayNames] Missing worldStateManager or accessListViewer dependencies.");
+                Debug.LogError("[WorldStateListener_DisplayNames] Missing JsonManager or accessListViewer dependencies.");
                 return;
             }
 
@@ -56,7 +57,7 @@ namespace SerenAccess
                 }
                 groupNames[i] = processedGroupName.ToUpper();
 
-                DataList dataList = worldStateManager.GetArray(currentKey); 
+                DataList dataList = jsonManager.GetArray(currentKey); 
 
                 sb.Clear();
                 

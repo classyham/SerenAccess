@@ -50,19 +50,19 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: worldStateManager
+      Data: jsonManager
     - Name: $v
       Entry: 7
       Data: 2|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: <Name>k__BackingField
       Entry: 1
-      Data: worldStateManager
+      Data: jsonManager
     - Name: <UserType>k__BackingField
       Entry: 7
       Data: 3|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
-      Data: SerenAccess.WorldStateManager, club.seren.access
+      Data: SerenJson.JsonManager, club.seren.json
     - Name: 
       Entry: 8
       Data: 
@@ -107,7 +107,7 @@ MonoBehaviour:
       Data: 7|UnityEngine.TooltipAttribute, UnityEngine.CoreModule
     - Name: tooltip
       Entry: 1
-      Data: The World State Manager script.
+      Data: The Json Manager script.
     - Name: 
       Entry: 8
       Data: 

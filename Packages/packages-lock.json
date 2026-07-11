@@ -6,8 +6,15 @@
       "source": "embedded",
       "dependencies": {
         "com.vrchat.base": "3.10.4",
-        "com.vrchat.worlds": "3.10.4"
+        "com.vrchat.worlds": "3.10.4",
+        "club.seren.json": "0.0.1"
       }
+    },
+    "club.seren.json": {
+      "version": "file:club.seren.json",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
     },
     "com.texelsaur.access": {
       "version": "file:com.texelsaur.access",
