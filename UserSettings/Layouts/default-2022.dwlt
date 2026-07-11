@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 1007
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Project
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -451,14 +451,14 @@ MonoBehaviour:
   m_LastFolders:
   - Packages/club.seren.access
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: D:\Projects\SerenAccess\SerenAccess
+  m_LastProjectPath: D:\Projects\SerenWorld\SerenAccess
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 130}
-    m_SelectedIDs: 8a650000
-    m_LastClickedID: 25994
-    m_ExpandedIDs: 00000000886500008a6500008c6500008e6500009065000092650000b6650000ee65000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 139}
+    m_SelectedIDs: 8c650000
+    m_LastClickedID: 25996
+    m_ExpandedIDs: 000000008a6500008c6500008e65000090650000926500009465000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -486,7 +486,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000886500008a6500008c6500008e6500009065000092650000
+    m_ExpandedIDs: 000000008a6500008c6500008e650000906500009265000094650000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -513,7 +513,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000b8b2000058b2000060f70000a0d0070016f900002e7c000056ac0000ea2fffff00000000d2d60000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -628,7 +628,7 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: fa6f0000
+      m_SelectedIDs: 
       m_LastClickedID: 0
       m_ExpandedIDs: dafaffff
       m_RenameOverlay:
@@ -1074,7 +1074,7 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0.019188775, y: -0.005402091, z: -0.00010459509, w: -0.9998114}
     speed: 2
-    m_Value: {x: 0.02068826, y: -0.005401873, z: -0.00011269729, w: -0.99977136}
+    m_Value: {x: 0.019188775, y: -0.005402091, z: -0.000104595085, w: -0.9998114}
   m_Size:
     m_Target: 0.6836317
     speed: 2
