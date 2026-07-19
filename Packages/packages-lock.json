@@ -7,7 +7,7 @@
       "dependencies": {
         "com.vrchat.base": "3.10.4",
         "com.vrchat.worlds": "3.10.4",
-        "club.seren.json": "0.0.1"
+        "club.seren.json": "0.0.2"
       }
     },
     "club.seren.json": {
