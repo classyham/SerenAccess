@@ -1,7 +1,7 @@
 {
   "name": "club.seren.access",
   "displayName": "_SEREN ACCESS",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "unity": "2022.3",
   "description": "Extensible remote whitelist based access control system Requires SerenJson",
   "vrchatVersion": "2022.1.1",
